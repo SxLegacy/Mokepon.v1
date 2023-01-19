@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKEPON</title>
+    <link rel="stylesheet" href="./stylesCanvas.css">
+</head>
+<body>
+    <section id="select-pet">
+        <h1 id="titulo1" class="title">MOKEPON</h1>
+
+        <h2 class="subt1">Elige tu Mascota </h2>
+
+        <div class="tarjetas-0">
+            <div id="contenedorTarjetas" class="tarjetas-1">        
+            </div><br>
+        
+            <div id= "contenedorTarjetas2" class="tarjetas-2">                
+            </div>
+        </div>
+        
+        <button id="boton-seleccionar-pet">Seleccionar</button>
+        <br>
+    </section>
+
+    <section id="ver-mapa">
+        <h2 class="subt1">Recorre el mapa</h2>
+        <canvas id="mapa"></canvas>
+        <button onmouseup="moveStop()" onmousedown="moverUp()">⬆</button>
+        <div >
+            <button onmouseup="moveStop()" onmousedown="moverLeft()">⬅</button>
+            
+            <button onmouseup="moveStop()" onmousedown="moverRight()">➡</button>
+        </div>
+        <div>
+        <button onmouseup="moveStop()" onmousedown="moverDown()">⬇</button>
+        </div>
+        
+
+    </section>
+    
+    <section id="select-atk">
+        <h1 id="titulo1" class="title">MOKEPON</h1>
+        
+        <h2 class="subt1">Elige tu Ataque </h2>
+        <div id="contenedoratks" class="btns-atk">
+            
+        </div>
+        
+        <div id="mensajes">
+            <p id="p-resultadovida">En espera por ataque</p>         
+            <div id="reinicio">
+                <section id="reiniciar">
+                    <button id="btn-reload">Reiniciar</button>
+                
+                </section>
+            </div>
+            
+        </div>
+        <div class="tablero">
+            <div>
+                <span id="mascota-jugador"></span>
+            </div>
+            
+            <div>
+                <span id="mascota-oponente"></span>                
+            </div>
+            <div>
+                <span>BATALLA</span>
+            </div>                 
+        </div>
+        <div class="conteo">
+            <div>                
+                <span id="vida-jugador">0</span>               
+            </div>
+            <div>                
+                <span id="vida-oponente">0</span>                
+            </div>
+            <div>                
+                <span>RESULTADO</span>            
+            </div>                 
+        </div>
+        <div class="historico" id="historico">
+            <div class="histJug">
+                <div id="resultadoJug"></div>
+            </div>
+            <div class="histOpo">
+                <div id="resultadoOpo"></div>
+            </div>
+            <div class="histResl">                
+                <div id="resultadovida"></div>
+            </div>            
+        </div>
+    </section> <br>
+    <script defer src="./js/mokeponCanvas.js"></script>
+</body>
+</html>
